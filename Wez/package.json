@@ -1,0 +1,21 @@
+{
+  "name": "wez",
+  "version": "1.0.0",
+  "description": "canvas",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run watch",
+    "dev": "ts-node ./app/server.ts",
+    "prod": "npm run build && npm run start",
+    "watch": "nodemon -e ts -w ./app -x npm run watch:serve",
+    "watch:serve": "ts-node ./app/main.ts -x nodemon ./server.js"
+  },
+  "author": "seven",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "browser-sync": "^2.26.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
