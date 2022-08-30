@@ -1,22 +1,20 @@
 ---
+import SampleLink from "../components/SampleLink.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<canvas id="life" width="500" height="500"></canvas>
-		<script>
-			import sample from "../core/sample";
-
-			document.addEventListener("DOMContentLoaded", () => {
-				sample();
-			});
-		</script>
-	</body>
-</html>
+<MainLayout>
+	<div class="flex flex-col">
+		<nav class="w-full p-4 bg-slate-600 text-white">
+			<div>
+				<h1 class="font-bold text-2xl">Canvas Play Grounds</h1>
+			</div>
+		</nav>
+		<div class="flex p-4">
+			<SampleLink
+				href="/canvas-playground/life_simulator"
+				desc="This is a simple life simulator">Life</SampleLink
+			>
+		</div>
+	</div>
+</MainLayout>

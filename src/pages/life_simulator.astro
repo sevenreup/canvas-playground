@@ -1,0 +1,14 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+	<canvas id="life" width="500" height="500"></canvas>
+	<script>
+		import sample from "../core/sample";
+
+		document.addEventListener("DOMContentLoaded", () => {
+			sample();
+		});
+	</script>
+</MainLayout>
